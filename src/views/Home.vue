@@ -2,6 +2,12 @@
     <div>
         <h1>Home</h1>
         <button v-on:click="clickHandle">Click me!</button>
+
+        <div class="grp">
+            <router-link :to="{ name: 'profile', params: { name: this.alex }}">Alex</router-link>
+            <router-link :to="{ name: 'profile', params: { name: this.light }}">Light</router-link>
+            
+        </div>
     </div>
 </template>
 
@@ -12,9 +18,12 @@ export default {
     data()  {
         return {
             firstName : "Hello",
-            lastName : "welcome"
+            lastName : "welcome",
+            alex : "alex",
+            light : "light"
         }
     },
+   
     methods : {
         clickHandle(){
             console.log("clicked", this.firstName + " "+ this.lastName);

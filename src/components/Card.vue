@@ -1,15 +1,22 @@
 <template>
     <div class="card">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quasi doloribus blanditiis asperiores similique aliquam.</p>
-        <button>View</button>
+        <div v-for="p in post" :key="p">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.desc }}</p>
+            <button>
+                <a :href="p.link">View</a>
+            </button>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-    name : 'Card'
+    name : 'Card',
+    props : {
+        post : Array
+    }
 }
 </script>
 

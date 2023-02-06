@@ -12,6 +12,12 @@
             <li>
                 <router-link to="/contact">Contact</router-link>
             </li>
+            <li>
+                <router-link to="/code">Code</router-link>
+            </li>
+            <li>
+                <router-link to="/profile/">Profile</router-link>
+            </li>
         </ul>
     </menu>
    </header>
